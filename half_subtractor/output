@@ -1,0 +1,50 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x24e9210 .scope module, "halfsub_t" "halfsub_t" 2 1;
+ .timescale 0 0;
+v0x251d860_0 .var "a", 0 0;
+v0x251d930_0 .var "b", 0 0;
+v0x251d9e0_0 .net "bor", 0 0, L_0x251dc50; 1 drivers
+v0x251da90_0 .net "diff", 0 0, L_0x251dda0; 1 drivers
+S_0x250cec0 .scope module, "h" "half_sub" 2 9, 3 1, S_0x24e9210;
+ .timescale 0 0;
+L_0x251db70 .functor NOT 1, v0x251d860_0, C4<0>, C4<0>, C4<0>;
+L_0x251dc50 .functor AND 1, L_0x251db70, v0x251d930_0, C4<1>, C4<1>;
+L_0x251dda0 .functor XOR 1, v0x251d860_0, v0x251d930_0, C4<0>, C4<0>;
+v0x24e96a0_0 .net *"_s0", 0 0, L_0x251db70; 1 drivers
+v0x251d5d0_0 .net "a", 0 0, v0x251d860_0; 1 drivers
+v0x251d670_0 .net "b", 0 0, v0x251d930_0; 1 drivers
+v0x251d710_0 .alias "bor", 0 0, v0x251d9e0_0;
+v0x251d7c0_0 .alias "diff", 0 0, v0x251da90_0;
+    .scope S_0x24e9210;
+T_0 ;
+    %vpi_call 2 6 "$dumpfile", "half_subtractor.vcd";
+    %vpi_call 2 7 "$dumpvars";
+    %end;
+    .thread T_0;
+    .scope S_0x24e9210;
+T_1 ;
+    %delay 0, 0;
+    %set/v v0x251d860_0, 0, 1;
+    %set/v v0x251d930_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x251d860_0, 0, 1;
+    %set/v v0x251d930_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x251d860_0, 1, 1;
+    %set/v v0x251d930_0, 0, 1;
+    %delay 15, 0;
+    %set/v v0x251d860_0, 1, 1;
+    %set/v v0x251d930_0, 1, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "halfsub_t.v";
+    "halfsub.v";

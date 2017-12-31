@@ -1,0 +1,46 @@
+$date
+	Fri May  1 09:49:54 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module halfsub_t $end
+$var wire 1 ! bor $end
+$var wire 1 " diff $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$scope module h $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ! bor $end
+$var wire 1 " diff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1!
+1"
+1$
+1&
+#15
+0!
+0$
+0&
+1#
+1%
+#30
+0"
+1$
+1&

@@ -1,0 +1,48 @@
+$date
+	Thu May 14 10:59:49 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module multiplexert $end
+$var wire 1 ! y $end
+$var reg 4 " d [3:0] $end
+$var reg 2 # s [1:0] $end
+$scope module h $end
+$var wire 4 $ d [3:0] $end
+$var wire 2 % s [1:0] $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+bx "
+x!
+$end
+#5
+1!
+b0 #
+b0 %
+b1 "
+b1 $
+#10
+0!
+b10 #
+b10 %
+b0 "
+b0 $
+#15
+b11 #
+b11 %
+b0 "
+#20
+b1 #
+b1 %
+b0 "

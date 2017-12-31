@@ -1,0 +1,96 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xe58f00 .scope module, "multiplexert" "multiplexert" 2 1;
+ .timescale 0 0;
+v0xe70750_0 .var "d", 3 0;
+v0xe707f0_0 .var "s", 1 0;
+v0xe708a0_0 .net "y", 0 0, L_0xe714c0; 1 drivers
+S_0xe58ff0 .scope module, "h" "multiplexer" 2 10, 3 1, S_0xe58f00;
+ .timescale 0 0;
+v0xe590e0_0 .net *"_s0", 1 0, C4<00>; 1 drivers
+v0xe6fca0_0 .net *"_s11", 0 0, L_0xe70cc0; 1 drivers
+v0xe6fd40_0 .net *"_s12", 1 0, C4<10>; 1 drivers
+v0xe6fde0_0 .net *"_s14", 0 0, L_0xe70e00; 1 drivers
+v0xe6fe90_0 .net *"_s17", 0 0, L_0xe70f60; 1 drivers
+v0xe6ff30_0 .net *"_s19", 0 0, L_0xe710d0; 1 drivers
+v0xe70010_0 .net *"_s2", 0 0, L_0xe70980; 1 drivers
+v0xe700b0_0 .net *"_s20", 0 0, L_0xe71170; 1 drivers
+v0xe701a0_0 .net *"_s22", 0 0, L_0xe71330; 1 drivers
+v0xe70240_0 .net *"_s5", 0 0, L_0xe70aa0; 1 drivers
+v0xe70340_0 .net *"_s6", 1 0, C4<01>; 1 drivers
+v0xe703e0_0 .net *"_s8", 0 0, L_0xe70bd0; 1 drivers
+v0xe704f0_0 .net "d", 3 0, v0xe70750_0; 1 drivers
+v0xe70590_0 .net "s", 1 0, v0xe707f0_0; 1 drivers
+v0xe706b0_0 .alias "y", 0 0, v0xe708a0_0;
+L_0xe70980 .cmp/eq 2, v0xe707f0_0, C4<00>;
+L_0xe70aa0 .part v0xe70750_0, 0, 1;
+L_0xe70bd0 .cmp/eq 2, v0xe707f0_0, C4<01>;
+L_0xe70cc0 .part v0xe70750_0, 1, 1;
+L_0xe70e00 .cmp/eq 2, v0xe707f0_0, C4<10>;
+L_0xe70f60 .part v0xe70750_0, 2, 1;
+L_0xe710d0 .part v0xe70750_0, 3, 1;
+L_0xe71170 .functor MUXZ 1, L_0xe710d0, L_0xe70f60, L_0xe70e00, C4<>;
+L_0xe71330 .functor MUXZ 1, L_0xe71170, L_0xe70cc0, L_0xe70bd0, C4<>;
+L_0xe714c0 .functor MUXZ 1, L_0xe71330, L_0xe70aa0, L_0xe70980, C4<>;
+    .scope S_0xe58f00;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "wave.vcd";
+    %vpi_call 2 8 "$dumpvars";
+    %end;
+    .thread T_0;
+    .scope S_0xe58f00;
+T_1 ;
+    %delay 5, 0;
+    %ix/load 0, 0, 0;
+    %set/x0 v0xe70750_0, 1, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 2, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %set/v v0xe707f0_0, 0, 2;
+    %delay 5, 0;
+    %ix/load 0, 0, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 2, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %movi 8, 2, 2;
+    %set/v v0xe707f0_0, 8, 2;
+    %delay 5, 0;
+    %ix/load 0, 0, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 2, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %set/v v0xe707f0_0, 1, 2;
+    %delay 5, 0;
+    %ix/load 0, 0, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 2, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %set/x0 v0xe70750_0, 0, 1;
+    %movi 8, 1, 2;
+    %set/v v0xe707f0_0, 8, 2;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "multiplexer_t.v";
+    "multiplexer.v";

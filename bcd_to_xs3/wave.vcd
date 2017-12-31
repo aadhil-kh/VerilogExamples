@@ -1,0 +1,75 @@
+$date
+	Fri May  1 19:21:20 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bcd_to_xs3_t $end
+$var wire 4 ! x [3:0] $end
+$var reg 4 " b [3:0] $end
+$scope module h $end
+$var wire 4 # b [3:0] $end
+$var wire 4 $ x [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 $
+b0 #
+b0 "
+b11 !
+$end
+#5
+b100 !
+b100 $
+b1 #
+b1 "
+#15
+b101 !
+b101 $
+b10 #
+b10 "
+#30
+b110 !
+b110 $
+b11 #
+b11 "
+#50
+b111 !
+b111 $
+b100 #
+b100 "
+#75
+b1000 !
+b1000 $
+b101 #
+b101 "
+#105
+b1001 !
+b1001 $
+b110 #
+b110 "
+#140
+b1010 !
+b1010 $
+b111 #
+b111 "
+#180
+b1011 !
+b1011 $
+b1000 "
+b1000 #
+#225
+b1100 !
+b1100 $
+b1001 #
+b1001 "
+#275
+b11 !
+b11 $
+b0 "
+b0 #
